@@ -106,6 +106,10 @@ Data Created On: Wednesday, August 3, 2022 [1:36 PM]
            </PrivateRoute>
          ),
        },
+       {
+        path: "*",
+        element: <Dashboard />,
+      },
      ],
    },
  ];

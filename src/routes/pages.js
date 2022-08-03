@@ -36,13 +36,13 @@ export const privatePages = [
   },
   {
     _id: 2,
-    path: `/user`,
+    path: `/user/feedback`,
     name: `Message`,
     icon:  <EmailIcon sx={{fontSize:23}}/>,
   },
   {
     _id: 3,
-    path: `/user`,
+    path: `/user/notification`,
     name: `Notification`,
     icon: <NotificationsIcon sx={{fontSize:23}}/>,
   },
@@ -51,7 +51,7 @@ export const privatePages = [
   /// for bottom sidebar pages
   {
   _id: 4,
-  path: `/user`,
+  path: `/user/setting`,
   name: `Settings`,
   icon: <SettingsIcon sx={{fontSize:23}}/>,
   },

@@ -11,11 +11,10 @@ import MarkEmailReadRoundedIcon from "@mui/icons-material/MarkEmailReadRounded";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
-import { teal, purple, blue, green, red } from "@mui/material/colors";
+import { purple, blue} from "@mui/material/colors";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import {timeSince} from '../../../utils/timeSince'
-import { NotificationSkeleton } from './Skeletons';
+import timeSince from '../../../utils/timeSince'
 import NotificationsNoneSharpIcon from '@mui/icons-material/NotificationsNoneSharp';
 
 

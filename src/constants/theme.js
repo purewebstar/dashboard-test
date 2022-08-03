@@ -44,28 +44,27 @@ const getDesignTokens = (mode) => ({
         : {
             // DARK MODE
             primary: {
-                main: `#dcdcdc`,
-                dark: `#dcdcdc`, 
-                light: `#dcdcdc`,
+              main: `#9e9e9e`,
+              dark: `#6e6e6e`,
+              light: `#b1b1b1`,
             },
             secondary: {
-              main: `#ffeb3b`,
-              dark: `#b2a429`, 
-              light: `#ffef62`,
+                main: `#13A77F`,
+                dark: `#13A77F`,
+                light: `#13A77F`,
             },
             info: {
-              main: `rgba( 20, 25, 34, 0.9)`,
-              dark: `rgba(0, 169, 244, 0.4)`, 
-              light: `rgba( 20, 25, 34, 0.9)`,
+                main: `rgba(24, 24, 24, 0.1)`,
+                dark: `rgba(24, 24, 24, 0.1)`,
+                light: `rgba(24, 24, 24, 0.1)`,
             },
-            background: { 
-              default: '#262626',
-              paper: '#1a1a1a',
-              
+            background: {
+                default: "#1c1e24",
+                paper: "#1a1e26",
             },
             text: {
-              primary: '#ffffff',
-              secondary: '#bdbdbd',
+                primary: "#ffffff",
+                secondary: "#bdbdbd",
             },
           }),
     },

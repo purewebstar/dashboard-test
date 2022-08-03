@@ -7,3 +7,18 @@ a{
   text-decoration: none !important;
   cursor: pointer !important;
 } 
+
+@media (max-width: 900px) {
+  .menu-icon {
+    display: none !important;
+  }
+}
+
+.support{
+  position: absolute !important;
+  bottom: 0 !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 95% !important;
+}
+
