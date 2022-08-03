@@ -50,10 +50,9 @@ const CircleChart = ({percentage, title}) =>{
       width: `100%`,
       display: 'flex',
       justifyContent: 'center',
-      mt:1,
       border: `1px solid #ddd`,
       borderRadius:2,
-      p:2,
+      p:3,
      }}
      >
      <Box
