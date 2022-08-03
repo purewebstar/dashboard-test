@@ -1,14 +1,11 @@
-import React from 'react';
+import React from "react";
+import routes from "./routes/routes";
+import { useRoutes } from "react-router-dom";
 
-const App = () =>{
+const App = () => {
+  let elements = useRoutes(routes);
 
-
-  return(
-    <>
-     <h1>Dashboard Test</h1>
-    </>
-
-  )
-}
+  return <>{elements}</>;
+};
 
 export default App;
