@@ -12,3 +12,13 @@ Data Created On: Wednesday, August 3, 2022 [1:36 PM]
 
 *
 */
+
+
+const config = {
+    API_BASE_URL: "",
+    BASE_URL: "",
+    DOMAIN_NAME: "",
+  };
+  
+  export default config;
+  
