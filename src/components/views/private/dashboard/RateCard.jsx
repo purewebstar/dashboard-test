@@ -7,7 +7,7 @@ import { blue, teal, red, purple, amber } from "@mui/material/colors";
 import PieChart from './PieChart'
 import Divider from '@mui/material/Divider';
 
-const RateCard = ({title, icon, count, bgcolor, primaryColor, secondaryColor, link, sent, delivered, opens}) =>{
+const RateCard = ({title, bgcolor,  link, sent, delivered, opens, total}) =>{
   let navigate = useNavigate();
 
   return (
@@ -70,7 +70,7 @@ const RateCard = ({title, icon, count, bgcolor, primaryColor, secondaryColor, li
             Total
            </Typography>
           <Typography component="div" sx={{fontSize:11, fontWeight: 700}} className='other-text'>
-            45%
+            {total}%
            </Typography>
           </Box>
           </Box>
@@ -79,7 +79,7 @@ const RateCard = ({title, icon, count, bgcolor, primaryColor, secondaryColor, li
 
       </Box>
         <Box sx={{display: 'flex',p:3, justifyContent: 'flex-start'}}>
-          <PieChart  title={title} percentage={15}  />
+          <PieChart  title={title} percentage={total}  />
         </Box>
       </Box>
       </>

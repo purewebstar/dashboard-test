@@ -13,9 +13,10 @@ Data Created On: Wednesday, August 3, 2022 [1:36 PM]
 *
 */
 
+let hapikey = ``;
 
 const config = {
-    API_BASE_URL: "",
+    API_BASE_URL: `https://api.hubapi.com/marketing-emails/v1/emails/with-statistics?hapikey=${hapikey}`,
     BASE_URL: "",
     DOMAIN_NAME: "https://email-admin.abraham-mitiku.com",
   };

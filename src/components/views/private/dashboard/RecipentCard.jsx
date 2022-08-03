@@ -35,10 +35,10 @@ const RecipentCard = ({ data }) => {
               mt: 2,
             }}
           >
+          {
+            2780
+          }
             
-            {
-              2536
-            }
           </Typography>
         </Box>
         <CardContent>

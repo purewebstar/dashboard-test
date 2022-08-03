@@ -97,7 +97,7 @@ const EmailTable = ({ data }) => {
         </TableHead>
         <TableBody>
           {data &&
-            data.map(({ _id, displayName, sent, open, clicks, bounces, date, unsubs },i) => {
+            data.map(({ _id, displayName, sent, open, clicks, bounces, date, unsubs, openRate},i) => {
               
             
             return (
@@ -143,7 +143,7 @@ const EmailTable = ({ data }) => {
                   {open&&open}
                 </TableCell>
                 <TableCell numeric sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},fontWeight: 500 }}>
-                  {clicks&&clicks}
+                  {openRate&&openRate} %
                 </TableCell>
                 <TableCell numeric sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},fontWeight: 500 }}>
                   {clicks&&clicks}

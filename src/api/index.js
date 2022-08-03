@@ -28,9 +28,9 @@ const instance = axios.create({
 // intercepting every requests
 instance.interceptors.request.use(async (config) => {
   // retreiving accessToken
-  const accessToken = JSON.parse(window.localStorage.getItem("access"));
-  config.headers.Authorization = `Bearer ${accessToken}`;
-  config.headers.ContentType = "application/json";
+ // const accessToken = JSON.parse(window.localStorage.getItem("access"));
+//  config.headers.Authorization = `Bearer ${accessToken}`;
+ config.headers.ContentType = "application/json";
   return config;
 });
 

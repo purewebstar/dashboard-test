@@ -27,7 +27,7 @@ import RateCard from "./RateCard";
 
 const View = () => {
 
-  const Recipents = emailData&&emailData.recipients;
+  const Recipents = emailData&&emailData.recipients&&emailData.recipients;
 
   React.useEffect(() => {
     $("title").html("Dashboard | Admin");
@@ -136,7 +136,7 @@ const View = () => {
             link={`/user`}
             
             icon={<SubscriptionsIcon sx={{ fontSize: 40, color: `#fff`}} />}
-            count={798}
+            count={emailData&&emailData.subscribers}
            />
           </Box>
 
@@ -181,6 +181,7 @@ const View = () => {
          sent={896}
          delivered={690}
          opens={190}
+         total={10}
          />
        </Box>
        <Box
@@ -192,9 +193,10 @@ const View = () => {
        >
          <RateCard
          title={`Response rate`}
-         sent={896}
+         sent={1196}
          delivered={690}
-         opens={190}
+         opens={230}
+         total={15}
          />
        </Box>
        </Grid>

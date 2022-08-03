@@ -162,7 +162,7 @@ const PrivateLayout = (props) => {
   let navigate = useNavigate();
 
   const [mode, setMode] = React.useState(
-    getLocalStorage("theme") ? getLocalStorage("theme") : "light"
+    getLocalStorage("theme") ? getLocalStorage("theme") : "dark"
   );
 
   React.useEffect(()=>{
