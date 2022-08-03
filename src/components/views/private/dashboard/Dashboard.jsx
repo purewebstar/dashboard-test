@@ -171,7 +171,7 @@ const View = () => {
        <Box
          sx={{
            justifyContent: "flex-start",
-           p:1,
+           p: {xs:3, sm:1},
            mt:8,
 
          }}
@@ -186,7 +186,8 @@ const View = () => {
        <Box
          sx={{
            justifyContent: "flex-start",
-           p:1,
+           p: {xs:3, sm:1},
+           mt: {xs:-5, sm:0}
          }}
        >
          <RateCard
