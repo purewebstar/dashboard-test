@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+html {
+  scroll-behavior: smooth!important;
+}
+a{
+  text-decoration: none !important;
+  cursor: pointer !important;
+} 
