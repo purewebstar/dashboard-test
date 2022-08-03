@@ -22,3 +22,17 @@ a{
   width: 95% !important;
 }
 
+.site-text {
+  font-family: "Montserrat Alternates", sans-serif !important;
+}
+.landing-text {
+  font-family: "Fredericka the Great", cursive !important;
+}
+
+.sub-text {
+  font-family: "Black Ops One", cursive;
+}
+
+.other-text {
+  font-family: "Noto Sans", sans-serif !important;
+}

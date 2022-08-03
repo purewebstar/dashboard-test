@@ -69,7 +69,6 @@ const AccountMenu = (props) => {
               }}
             >
              <Avatar 
-                alt={`A`} 
                 sx={{
                   width: 50,
                   height: 50,
@@ -77,10 +76,10 @@ const AccountMenu = (props) => {
                   mb: 1,
                   mt: 1,
                   left: "35%",
-                  bgcolor: teal[300],
+                  bgcolor: teal[400],
                   color: "#fff",
                 }}
-                />
+              >A</Avatar>
               <Typography
                 variant="h5"
                 noWrap

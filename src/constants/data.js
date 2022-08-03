@@ -30,4 +30,38 @@ export const siteData = {
         email: ``,
     },
     about: ``,
-}
+};
+
+export const emailPerformance = {
+    recipients: [
+        {
+
+        },
+    ],
+    deliveries: [
+        {
+
+        },
+    ],
+    subscribers: [
+        {
+
+        },
+    ],
+    conversion: [
+        {
+
+        },
+    ],
+    response: [
+        {
+
+        },
+    ],
+    bonuses: [
+        {
+
+        },
+    ],
+
+};

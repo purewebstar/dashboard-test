@@ -353,14 +353,14 @@ const PrivateLayout = (props) => {
                       variant="dot"
                     >
                       <Avatar
-                        alt={`A`}
                         sx={{
                           width: 30,
                           height: 30,
-                          bgcolor: teal[300],
+                          bgcolor: teal[400],
                           color: `#fff`,
                         }}
-                      />
+                      >
+                      A</Avatar>
                     </StyledBadge>
                   </Stack>
                 </IconButton>
