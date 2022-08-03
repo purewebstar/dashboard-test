@@ -162,7 +162,7 @@ const PrivateLayout = (props) => {
   let navigate = useNavigate();
 
   const [mode, setMode] = React.useState(
-    getLocalStorage("theme") ? getLocalStorage("theme") : "dark"
+    getLocalStorage("theme") ? getLocalStorage("theme") : "light"
   );
 
   React.useEffect(()=>{
@@ -591,7 +591,13 @@ const PrivateLayout = (props) => {
               VIEW PAGES WILL RENDER IN OUTLET
             */
           }
+          <Box
+          sx={{
+            bgcolor: (mode==='light')?`#ddd`:`background.default`,
+          }}
+          >
           <Outlet />
+          </Box>
 
         </Box>
       </Box>
