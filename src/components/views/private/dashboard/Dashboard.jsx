@@ -19,6 +19,8 @@ import SouthEastIcon from '@mui/icons-material/SouthEast';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import EmailCard from './EmailCard'
+import EmailTable from './EmailTable';
 
 const View = () => {
 
@@ -148,7 +150,32 @@ const View = () => {
         </Grid>
       </Grid>
 
-   
+   {/**
+       *  Email performance table & subscribers card
+       */}
+       <Grid
+       container
+       direction="row"
+       justifyContent="center"
+       sx={{
+         p: 2,
+         mt: 10,
+         mb: 15,
+       }}
+       spacing={3}
+     >
+     <Grid xs={12} md={4}></Grid>
+       <Grid xs={12} md={8}>
+         <Box
+           sx={{
+             justifyContent: "flex-start",
+             p: {xs:1, md:0}
+           }}
+         >
+          <EmailTable data={Recipents}/>
+         </Box>
+       </Grid>
+     </Grid>
     </>
   );
 };
