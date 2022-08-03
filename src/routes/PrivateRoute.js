@@ -22,10 +22,10 @@ const PrivateRoute = ({ children }) => {
   let access = getLocalStorage("access");
   let location = useLocation();
 
-  //if (!(refresh && access)) {
-     //redirecting to login page
-  //  return <Navigate to="/" state={{ from: location }} replace />;
-  //}
+  if (!(refresh && access)) {
+    //redirecting to login page
+    return <Navigate to="/" state={{ from: location }} replace />;
+  }
   return children;
 };
 

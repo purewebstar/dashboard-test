@@ -42,7 +42,7 @@ import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import {setLocalStorage, getLocalStorage} from '../../utils/Storage';
-import { red } from "@mui/material/colors";
+import { red, teal } from "@mui/material/colors";
 import config from "../../config/config";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import siteLogo from "../../assets/images/logo.png";
@@ -353,30 +353,11 @@ const PrivateLayout = (props) => {
                       variant="dot"
                     >
                       <Avatar
-                        alt={
-                          profile &&
-                          profile.firstName &&
-                          profile.firstName.charAt(0)
-                        }
-                        src={
-                          profile &&
-                          profile.profileObj &&
-                          profile.profileObj.photo
-                            ? profile.profileObj.photo.includes(
-                                "https://lh3.googleusercontent.com/"
-                              )
-                              ? profile && profile.profileObj.photo
-                              : `${config.WS_URL}images/profile/${
-                                  profile.profileObj &&
-                                  profile.profileObj.photo &&
-                                  profile.profileObj.photo
-                                }`
-                            : profile && profile.firstName.charAt(0)
-                        }
+                        alt={`A`}
                         sx={{
                           width: 30,
                           height: 30,
-                          bgcolor: red[300],
+                          bgcolor: teal[300],
                           color: `#fff`,
                         }}
                       />

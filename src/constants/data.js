@@ -1,7 +1,7 @@
 // for sample admin auth
-export const authAdmin = {
-    admin: 'admintest@gmail.com',
-    password: 'admintest',
+export const auth = {
+    adminEmail: 'admintest@gmail.com',
+    adminPassword: 'admintest',
 };
 // site data informations
 export const siteData = {

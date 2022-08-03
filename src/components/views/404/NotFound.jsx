@@ -4,7 +4,7 @@ const NotFound = () =>{
 
     return(
         <>
-            <h1>Page Not Found.</h1>
+            <h1 style={{textAlign: "center"}}>Page Not Found.</h1>
         </>
     )
 };
