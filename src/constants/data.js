@@ -32,22 +32,54 @@ export const siteData = {
     about: ``,
 };
 
-export const emailPerformance = {
+export const emailData = {
     recipients: [
         {
-
+          _id: `11221121`,
+          sent: 834,
+          open: 490,
+          clicks: 100,
+          bounces: 14,
+          date: `13 days ago`,
         },
-    ],
-    deliveries: [
         {
-
+        _id: `1122112`,
+        sent: 834,
+          open: 490,
+          clicks: 100,
+          bounces: 14,
+          date: `13 days ago`,
         },
-    ],
-    subscribers: [
         {
-
+        _id: `1122113`,
+        sent: 834,
+          open: 490,
+          clicks: 100,
+          bounces: 14,
+          date: `13 days ago`,
+        },
+        {
+        _id: `1122114`,
+        sent: 834,
+          open: 490,
+          clicks: 100,
+          bounces: 14,
+          date: `13 days ago`,
+        },
+        {
+        _id: `1122115`,
+          sent: 434,
+          open: 490,
+          clicks: 100,
+          bounces: 14,
+          date: `13 days ago`,
         },
     ],
+    deliveries: 3466,
+    subscribers: {
+        total: 1989,
+        unsub: 89,
+    },
     conversion: [
         {
 
@@ -58,10 +90,4 @@ export const emailPerformance = {
 
         },
     ],
-    bonuses: [
-        {
-
-        },
-    ],
-
 };
