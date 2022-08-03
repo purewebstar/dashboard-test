@@ -14,6 +14,7 @@ import { teal, purple, blue, red } from "@mui/material/colors";
 import MuiLink from '@mui/material/Link';
 import timeSince from '../../../../utils/timeSince';
 
+
 const EmailTable = ({ data }) => {
 
   return (
@@ -79,7 +80,7 @@ const EmailTable = ({ data }) => {
         </TableHead>
         <TableBody>
           {data &&
-            data.map(({ _id, displayName, sent, open, clicks, bounces, date, unsubs }) => {
+            data.map(({ _id, displayName, sent, open, clicks, bounces, date, unsubs },i) => {
               
             
             return (
@@ -101,7 +102,7 @@ const EmailTable = ({ data }) => {
                         fontSize: {xs:11, sm: 11, md:11, lg:11},ml: 1,
                       }}
                     >
-                      {displayName&&displayName}
+                      {displayName&&displayName}_{i}
                     </Typography>
                     <Typography
 

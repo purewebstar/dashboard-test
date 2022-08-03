@@ -20,6 +20,7 @@ import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import EmailCard from './EmailCard'
+import PieChart from './PieChart'
 import EmailTable from './EmailTable';
 
 const View = () => {
@@ -156,15 +157,14 @@ const View = () => {
        <Grid
        container
        direction="row"
-       justifyContent="center"
+       justifyContent="space-between"
        sx={{
          p: 2,
          mt: 10,
          mb: 15,
        }}
-       spacing={3}
+       
      >
-     <Grid xs={12} md={4}></Grid>
        <Grid xs={12} md={8}>
          <Box
            sx={{
@@ -174,6 +174,25 @@ const View = () => {
          >
           <EmailTable data={Recipents}/>
          </Box>
+       </Grid>
+       <Grid xs={12} md={4}>
+       <Box
+         sx={{
+           justifyContent: "flex-start",
+           p: 2
+         }}
+       >
+         <PieChart title={`Conversion Rate`} percentage={10} />
+       </Box>
+       <Box
+         sx={{
+           justifyContent: "flex-start",
+           p: 2,
+           mt:2,
+         }}
+       >
+         <PieChart title={`Response Rate`} percentage={15} />
+       </Box>
        </Grid>
      </Grid>
     </>

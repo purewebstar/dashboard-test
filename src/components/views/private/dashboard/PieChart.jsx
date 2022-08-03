@@ -1,51 +1,77 @@
-import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
-import { Box } from '@mui/material';
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+function CircularProgressWithLabel(props) {
+  return (
+    <Box sx={{ position: 'relative', display: 'inline-flex',justifyContent: 'center'}}>
+      <CircularProgress 
+       variant="determinate" 
+      size={110}
+      thickness={10}
+      color='secondary'{...props} />
+      <Box
+        sx={{
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography variant='h6' className='other-text' sx={{fontWeight:700}} component="div" color="text.primary">
+          {`${Math.round(props.value)}%`}
+        </Typography>
+      </Box>
+    </Box>
+  );
+}
 
-export const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [
-    {
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-      ],
-      borderWidth: 1,
-    },
-  ],
+CircularProgressWithLabel.propTypes = {
+  /**
+   * The value of the progress indicator for the determinate variant.
+   * Value between 0 and 100.
+   * @default 0
+   */
+  value: PropTypes.number.isRequired,
 };
 
-const PieChart = () =>{
- 
-  return (
+const CircleChart = ({percentage, title}) =>{
+
+  return(
     <>
      <Box
      sx={{
-      bgcolor: 'background.paper',
-      p:3,
+      width: `100%`,
+      display: 'flex',
+      justifyContent: 'center',
+      mt:1,
+      border: `1px solid #ddd`,
+      borderRadius:2,
+      p:2,
      }}
      >
-     <Pie data={data} />;
+     <Box
+
+     >
+     <CircularProgressWithLabel value={percentage} />
+     <Typography
+         
+     className='other-text'
+     variant='h5'
+     sx={{textAlign: 'center', fontWeight: 600}}
+      >
+      {title}
+      </Typography>
+     </Box>
      </Box>
     </>
   )
 }
 
-export default PieChart;
+export default CircleChart;
