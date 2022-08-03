@@ -13,24 +13,41 @@ import Avatar from "@mui/material/Avatar";
 import { teal, purple, blue, red } from "@mui/material/colors";
 import MuiLink from '@mui/material/Link';
 import timeSince from '../../../../utils/timeSince';
-
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 
 const EmailTable = ({ data }) => {
 
   return (
-  <div style={{marginLeft: '10px'}}>
-    <Typography
-      variant="h5"
-      className="other-text"
-      color='primary.light'
-      sx={{
-        mt: { xs: 4, md: 0 },
-        fontWeight: 500,
-        mb: 1,
-      }}
-    >
-      Recently Sent Emails
-    </Typography>
+    <>
+
+    <Container>
+    <Grid
+    container
+    direction="row"
+    justifyContent="space-between"
+    sx={{
+      p: 1,
+    }}
+  >
+    <Grid xs={12}>
+      <Box>
+      <Typography
+        variant="h4"
+        className="other-text"
+        sx={{
+          fontWeight: 600,
+          mt: 2,
+        }}
+      >
+      
+      Email Marketing Performance
+      </Typography>
+      </Box>
+      <Divider sx={{mb:0,mt:1}} />
+    </Grid>
+    </Grid>
     <Box
       sx={{
         bgcolor: "background.paper",
@@ -43,38 +60,38 @@ const EmailTable = ({ data }) => {
           <TableRow>
             <TableCell
               className="other-text"
-              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11}, fontWeight: 600 }}
+              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},color: blue[800], fontWeight: 600 }}
             >
-              {" "}
+              Campaign
               
             </TableCell>
             <TableCell
               className="other-text"
-              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11}, fontWeight: 600 }}
+              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},color: blue[800], fontWeight: 600 }}
               numeric
             >
-              SENT
+              Send
             </TableCell>
             <TableCell
               className="other-text"
-              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11}, fontWeight: 600 }}
+              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},color: blue[800], fontWeight: 600 }}
               numeric
             >
-              OPENS
+              Opens
             </TableCell>
             <TableCell
               className="other-text"
-              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11}, fontWeight: 600 }}
+              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},color: blue[800], fontWeight: 600 }}
               numeric
             >
-              CLICKS
+              Open rate
             </TableCell>
             <TableCell
               className="other-text"
-              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11}, fontWeight: 600 }}
+              sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},color: blue[800], fontWeight: 600 }}
               numeric
             >
-              BOUNCES
+              Clicked
             </TableCell>
           </TableRow>
         </TableHead>
@@ -97,22 +114,14 @@ const EmailTable = ({ data }) => {
                     <Typography
                       variant="h6"
                       className="other-text"
-                      color='secondary.light'
+                      color='text.primary'
                       sx={{
-                        fontSize: {xs:11, sm: 11, md:11, lg:11},ml: 1,
+                        fontSize: {xs:11, sm: 11, md:11, lg:11},
+                        fontWeight: {xs: 400, sm:600}
+
                       }}
                     >
                       {displayName&&displayName}_{i}
-                    </Typography>
-                    <Typography
-
-                      className="other-text"
-                      color='primary.light'
-                      sx={{
-                        fontSize: 8,ml: 1,
-                      }}
-                    >
-                      {date&&date}
                     </Typography>
                     </MuiLink>
                   </Box>
@@ -137,16 +146,15 @@ const EmailTable = ({ data }) => {
                   {clicks&&clicks}
                 </TableCell>
                 <TableCell numeric sx={{ fontSize: {xs:11, sm: 11, md:11, lg:11},fontWeight: 500 }}>
-                {
-                    bounces&&bounces
-                }
+                  {clicks&&clicks}
                 </TableCell>
               </TableRow>
             )})}
         </TableBody>
       </Table>
     </Box>
-  </div>
+    </Container>
+    </>
 );
 }
 

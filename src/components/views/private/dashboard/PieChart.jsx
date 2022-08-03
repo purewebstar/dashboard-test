@@ -9,7 +9,7 @@ function CircularProgressWithLabel(props) {
     <Box sx={{ position: 'relative', display: 'inline-flex',justifyContent: 'center'}}>
       <CircularProgress 
        variant="determinate" 
-      size={110}
+      size={90}
       thickness={10}
       color='secondary'{...props} />
       <Box
@@ -50,22 +50,15 @@ const CircleChart = ({percentage, title}) =>{
       width: `100%`,
       display: 'flex',
       justifyContent: 'center',
-      border: `1px solid #ddd`,
-      borderRadius:2,
-      p:3,
      }}
      >
      <Box
 
      >
      <CircularProgressWithLabel value={percentage} />
-     <Typography
-         
-     className='other-text'
-     variant='h5'
-     sx={{textAlign: 'center', fontWeight: 600}}
-      >
-      {title}
+
+      <Typography variant="h6" color='secondary.dark' component="div" className='other-text' sx={{fontWeight:400}}>
+        {title}
       </Typography>
      </Box>
      </Box>

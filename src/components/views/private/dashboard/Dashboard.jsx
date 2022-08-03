@@ -19,9 +19,11 @@ import SouthEastIcon from '@mui/icons-material/SouthEast';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import EmailCard from './EmailCard'
-import PieChart from './PieChart'
+import EmailCard from './EmailCard';
+import PieChart from './PieChart';
 import EmailTable from './EmailTable';
+import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
+import RateCard from "./RateCard";
 
 const View = () => {
 
@@ -55,20 +57,10 @@ const View = () => {
             }}
           >
           
-          Email Marketing Dashboard
-          </Typography>
-          <Typography
-            variant="h5"
-            color="primary.light"
-            className="other-text"
-            sx={{
-              mb: 0,
-            }}
-          >
-           Created 20 days ago
+          Dashboard
           </Typography>
           </Box>
-          <Divider sx={{mb:4,mt:1}} />
+          <Divider sx={{mb:2,mt:1}} />
         </Grid>
         <Grid xs={12} md={6}>
           <Box
@@ -137,14 +129,14 @@ const View = () => {
             
           />
           <DashCard
-            title={`Total Recipients`}
+            title={`Total Subscriptions`}
             primaryColor="#fff"
             secondaryColor="#fff"
-            bgcolor={teal[400]}
+            bgcolor={red[400]}
             link={`/user`}
             
-            icon={<AttachEmailIcon sx={{ fontSize: 40, color: `#fff`}} />}
-            count={98}
+            icon={<SubscriptionsIcon sx={{ fontSize: 40, color: `#fff`}} />}
+            count={798}
            />
           </Box>
 
@@ -160,10 +152,10 @@ const View = () => {
        justifyContent="space-between"
        sx={{
          p: 2,
-         mt: 10,
+         mt: 0,
          mb: 15,
        }}
-       
+       spacing={3} 
      >
        <Grid xs={12} md={8}>
          <Box
@@ -179,19 +171,30 @@ const View = () => {
        <Box
          sx={{
            justifyContent: "flex-start",
-           p: 2
+           p:1,
+           mt:8,
+
          }}
        >
-         <PieChart title={`Conversion Rate`} percentage={10} />
+         <RateCard
+         title={`Conversion rate`}
+         sent={896}
+         delivered={690}
+         opens={190}
+         />
        </Box>
        <Box
          sx={{
            justifyContent: "flex-start",
-           p: 2,
-           mt:2,
+           p:1,
          }}
        >
-         <PieChart title={`Response Rate`} percentage={15} />
+         <RateCard
+         title={`Response rate`}
+         sent={896}
+         delivered={690}
+         opens={190}
+         />
        </Box>
        </Grid>
      </Grid>

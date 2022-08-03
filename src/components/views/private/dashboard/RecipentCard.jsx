@@ -14,7 +14,7 @@ const RecipentCard = ({ data }) => {
         width: { xs: `100%`, md: `95%` },
         bgcolor: `background.paper`,
         border: `1px solid #ddd`,
-        borderRadius: 2,
+        borderRadius: 0,
         mb:2,
       }}
     >
@@ -37,7 +37,7 @@ const RecipentCard = ({ data }) => {
           >
             
             {
-              4657
+              2536
             }
           </Typography>
         </Box>
@@ -49,7 +49,7 @@ const RecipentCard = ({ data }) => {
             className="other-text"
             sx={{ fontWeight: 600, mt: 6, color: deepOrange[400] }}
           >
-            TOTAL RECIPENTS
+            TOTAL RECIPIENTS
           </Typography>
           <Typography
             variant="body2"

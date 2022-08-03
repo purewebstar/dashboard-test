@@ -255,7 +255,7 @@ const PrivateLayout = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: "flex", bgcolor: "background.default" }}>
+      <Box sx={{ display: "flex", bgcolor: (mode==='light')?`#ddd`:`background.default`}}>
         <CssBaseline />
         <AppBar open={open}>
           <Toolbar sx={{ bgcolor: "background.paper" }}>

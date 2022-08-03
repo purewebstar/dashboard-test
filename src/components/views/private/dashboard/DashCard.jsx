@@ -10,7 +10,7 @@ const DashCard = ({title, icon, count, bgcolor, primaryColor, secondaryColor, li
 
   return (
       <>
-      <Box onClick={() => navigate(link?link: `/user`)} sx={{position: 'relative',bgcolor: bgcolor?bgcolor:'background.paper', display: 'flex',width:`100%`,p:0, mr:2, mb:2, justifyContent: 'space-between', borderRadius:2, border: `1px solid #ddd`,}}>
+      <Box onClick={() => navigate(link?link: `/user`)} sx={{position: 'relative',bgcolor: bgcolor?bgcolor:'background.paper', display: 'flex',width:`100%`,p:0, mr:2, mb:2, justifyContent: 'space-between', borderRadius:0, border: `1px solid #ddd`,}}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto', mt:2 }}>
           <Typography component="div" variant="h4" color={primaryColor?primaryColor:'secondary.light'} className='other-text'>
@@ -24,7 +24,7 @@ const DashCard = ({title, icon, count, bgcolor, primaryColor, secondaryColor, li
             <>
              <Box
              sx={{
-              display: 'flex',
+              display: 'inline-flex',
               justifyContent: 'flex-end',
               mt:0,
               bottom:1,
@@ -34,12 +34,10 @@ const DashCard = ({title, icon, count, bgcolor, primaryColor, secondaryColor, li
               {
                 bottomIcon
               }
-              <Typography component="div" className='other-text' sx={{fontWeight:400, fontSize: 9, color: (sign==='-'?red[400]:teal[400])}}>
+              <Typography component="div" className='other-text' sx={{fontWeight:400, fontSize: 10, color: (sign==='-'?red[400]:teal[400])}}>
               {sign} {bottomPercentage}
               </Typography>
-             <Typography color={`primary.light`} component="div" className='other-text' sx={{ml:4,fontWeight:400, fontSize:9}}>
-              {bottomText}
-              </Typography>
+
              </Box>
             </>
             :
